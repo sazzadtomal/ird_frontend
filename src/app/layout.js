@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import Sidebar from "@/components/Sidebar/Sidebar";
+import Topbar from "@/components/Topbar/Topbar";
+import BottomBar from "@/components/Bottombar/BottomBar";
+import RightBar from "@/components/Rightbar/RightBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,7 +14,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-[#ebeef2] relative`}>
+        <div className="z-0 lg:fixed lg:inset-x-0 xl:fixed xl:inset-x-0 xl:p-6 xl:pb-0 2xl:px-10 2xl:pt-6 2xl:fixed 2xl:inset-x-0 3xl:p-10 3xl:pb-0 3xl:fixed 3xl:inset-x-0">
+          <div className="relative grid gap-6 sm-max:overflow-auto xs:flex xs:flex-col xs:gap-0  xl:grid-rows-[46px,1fr] 2xl:grid-rows-[46px,1fr] 3xl:grid-rows-[46px,1fr] z-0 xl:grid-cols-[105px,350px,1fr] 2xl:grid-cols-[105px,350px,1fr,270px] 3xl:grid-cols-[105px,350px,1fr,300px]">
+            <Sidebar />
+            <Topbar />
+              {children}
+            <RightBar />
+            <BottomBar />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
