@@ -1,7 +1,7 @@
 import DuaCard from "./DuaCard";
 
 async function getData(id) {
-  const res = await fetch(`http://www.localhost:8000/dua_by_sub/${id}`);
+  const res = await fetch(`https://ird-beckend.onrender.com/dua_by_sub/${id}`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

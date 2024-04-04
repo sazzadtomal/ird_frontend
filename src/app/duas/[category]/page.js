@@ -1,6 +1,7 @@
 import DuaContainer from "@/components/Dua/DuaContainer";
 import MobileNavigation from "@/components/MobileNavigation";
 
+
 const page = async ({searchParams}) => {
  
   return (

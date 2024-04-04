@@ -13,7 +13,7 @@ const Category = ({dua,sub,name,id}) => {
 
 
   const getSubCatagories=()=>{
-    fetch(`http://www.localhost:8000/category/${id}`)
+    fetch(`https://ird-beckend.onrender.com/category/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data)

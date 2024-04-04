@@ -4,7 +4,7 @@ import DuaCardContainer from "./DuaCardContainer"
 
 
 async function getData(id) {
-  const res = await fetch(`http://www.localhost:8000/category/${id}`)
+  const res = await fetch(`https://ird-beckend.onrender.com/category/${id}`)
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

@@ -2,7 +2,7 @@ import SearchBox from "@/components/SearchBox";
 import Category from "@/components/Category/Category";
 
 async function getData() {
-  const res = await fetch('http://www.localhost:8000/all_categories')
+  const res = await fetch('https://ird-beckend.onrender.com/all_categories')
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

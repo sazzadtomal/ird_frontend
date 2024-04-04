@@ -19,7 +19,7 @@ const SubCategory = ({name,id,fullPath}) => {
     elem.scrollIntoView({behavior:"smooth"})
 
 
-    fetch(`http://localhost:8000/dua_by_sub/${id}`)
+    fetch(`https://ird-beckend.onrender.com/dua_by_sub/${id}`)
     .then((res) => res.json())
     .then((data) => {
       setData(data)
